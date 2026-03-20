@@ -1,0 +1,646 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Music as Pain Relief — INF172 Research Project</title>
+  <meta name="description"
+    content="A student research project exploring whether music reduces perceived pain and increases pain tolerance during a controlled cold pressor task." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:wght@400;500;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- Skip navigation (WCAG 2.4.1) -->
+  <a href="#hero" class="skip-link">Skip to main content</a>
+
+  <!-- ───────────── NAVIGATION ───────────── -->
+  <nav id="navbar" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="#hero" class="nav-logo" aria-label="Home">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor" stroke="none" aria-hidden="true">
+          <ellipse cx="12" cy="6" rx="2.8" ry="5" transform="rotate(0,   12, 12)" />
+          <ellipse cx="12" cy="6" rx="2.8" ry="5" transform="rotate(60,  12, 12)" />
+          <ellipse cx="12" cy="6" rx="2.8" ry="5" transform="rotate(120, 12, 12)" />
+          <ellipse cx="12" cy="6" rx="2.8" ry="5" transform="rotate(180, 12, 12)" />
+          <ellipse cx="12" cy="6" rx="2.8" ry="5" transform="rotate(240, 12, 12)" />
+          <ellipse cx="12" cy="6" rx="2.8" ry="5" transform="rotate(300, 12, 12)" />
+        </svg>
+        <span>Team 2</span>
+      </a>
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false"
+        aria-controls="navLinks">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#background">Background</a></li>
+        <li><a href="#question">Question</a></li>
+        <li><a href="#procedure">Procedure</a></li>
+        <li><a href="#results">Results</a></li>
+        <li><a href="#implications">Implications</a></li>
+        <li><a href="#limitations">Limitations</a></li>
+        <li><a href="#team">Team</a></li>
+        <li><a href="#references" class="nav-cta" aria-label="References and GitHub">GitHub</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ───────────── HERO ───────────── -->
+  <header id="hero" class="fusion-hero">
+
+    <!-- Background layers -->
+    <div class="hero-bg" aria-hidden="true">
+      <div class="hero-grid"></div>
+      <div class="ambient-glow glow-1"></div>
+      <div class="ambient-glow glow-2"></div>
+      <div class="ambient-glow glow-3"></div>
+      <!-- EKG heartbeat trace (healthcare layer) -->
+      <svg class="hero-ekg-svg" viewBox="0 0 1440 120" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg"
+        aria-hidden="true">
+        <path class="ekg-line"
+          d="M0,60 L615,60 L640,60 L660,18 L678,102 L696,8 L714,60 L1230,60 C 1248,8 1272,8 1290,60 C 1308,102 1332,102 1350,60 C 1383,8 1415,8 1440,60" />
+      </svg>
+
+      <!-- Subtle audio pulse rings -->
+      <div class="hero-pulse-rings">
+        <div class="pulse-ring ring-1"></div>
+        <div class="pulse-ring ring-2"></div>
+        <div class="pulse-ring ring-3"></div>
+      </div>
+    </div>
+
+    <div class="container hero-container">
+      <!-- Left Column: Content -->
+      <div class="hero-text-col">
+
+        <!-- Research badge -->
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          <span class="hero-badge-text">INF172 · Student Research Project</span>
+        </div>
+
+        <!-- Headline -->
+        <h1 class="hero-headline">
+          Music as<br />
+          <span class="hero-headline-accent">Pain Relief</span>
+        </h1>
+
+        <p class="hero-subtitle">
+          Can listening to music reduce how much pain you feel? We ran a controlled study with 15 participants to find
+          out.
+        </p>
+
+        <!-- CTA Block -->
+        <div class="hero-cta-block">
+          <a href="#results" class="btn hero-btn-primary">
+            See Results
+          </a>
+          <a href="#procedure" class="btn hero-btn-ghost">View Study Design</a>
+        </div>
+
+        <!-- Inline stat strip -->
+        <div class="hero-stat-strip">
+          <div class="hero-stat-item">
+            <span class="hero-stat-value">73.3<span class="hero-stat-unit">%</span></span>
+            <span class="hero-stat-desc">found music more tolerable</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-value">60<span class="hero-stat-unit">%</span></span>
+            <span class="hero-stat-desc">rated effectiveness ≥ 4 out of 5</span>
+          </div>
+          <div class="hero-stat-divider"></div>
+          <div class="hero-stat-item">
+            <span class="hero-stat-value">15</span>
+            <span class="hero-stat-desc">participants, controlled study</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Visual -->
+      <div class="hero-visual-col">
+
+        <!-- Main image card -->
+        <div class="hero-image-card">
+          <div class="hero-image-bg-glow"></div>
+          <div class="hero-image-frame">
+            <img src="images/hero-fusion.png" alt="Person wearing headphones in a calm clinical setting" class="hero-image" />
+          </div>
+
+          <!-- Audio indicator chip (floats over image) -->
+          <div class="hero-audio-chip">
+            <div class="chip-eq">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
+            <span class="chip-label">Audio Intervention Active</span>
+          </div>
+
+          <!-- Score badge (floats top-left) -->
+          <div class="hero-score-badge">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M9 18V5l12-2v13" />
+              <circle cx="6" cy="18" r="3" />
+              <circle cx="18" cy="16" r="3" />
+            </svg>
+            <div>
+              <div class="badge-value">4.2 / 5</div>
+              <div class="badge-label">Avg. relief score</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- GitHub link -->
+        <div class="hero-link-row">
+          <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="hero-github-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path fill-rule="evenodd" clip-rule="evenodd"
+                d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.166 6.839 9.489.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.603-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.462-1.11-1.462-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.831.092-.646.35-1.086.636-1.336-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.203 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.161 22 16.418 22 12c0-5.523-4.477-10-10-10z" />
+            </svg>
+            View source on GitHub
+          </a>
+          <a href="#references" class="hero-github-link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+              <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+            </svg>
+            View references
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- ───────────── BACKGROUND ───────────── -->
+  <section id="background" class="section">
+    <div class="container">
+      <p class="section-tag">Why This Matters</p>
+      <h2>Research Background</h2>
+      <div class="card-grid cols-2">
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M4.8 2.3A.3.3 0 1 0 5 2H4a2 2 0 0 0-2 2v5a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6V4a2 2 0 0 0-2-2h-1a.2.2 0 1 0 .3.3" />
+              <path d="M8 15v1a6 6 0 0 0 6 6v0a6 6 0 0 0 6-6v-4" />
+              <circle cx="20" cy="10" r="2" />
+            </svg>
+          </div>
+          <h3>The Problem</h3>
+          <p>Pain is one of the most common reasons people seek medical care, and it's still hard to treat well.
+            Medication, physical therapy, and invasive procedures all work in some cases, but each carries side effects,
+            high costs, or dependency risks.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3" />
+            </svg>
+          </div>
+          <h3>Why Music?</h3>
+          <p>Music costs nothing, requires no prescription, and doesn't cause side effects. Some prior research points
+            in a positive direction, but tightly controlled tests are rare. We wanted to add a small, concrete data
+            point.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 18h8" />
+              <path d="M3 22h18" />
+              <path d="M14 22a7 7 0 1 0 0-14h-1" />
+              <path d="M9 14h2" />
+              <path d="M9 12a2 2 0 0 1-2-2V6h6v4a2 2 0 0 1-2 2Z" />
+              <path d="M12 6V3a1 1 0 0 0-1-1H9a1 1 0 0 0-1 1v3" />
+            </svg>
+          </div>
+          <h3>Research Context</h3>
+          <p>Music therapy and psychoacoustics research suggested that music can reduce perceived pain. We designed a
+            study to test whether it changed pain intensity ratings and how long people could tolerate discomfort.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10" />
+              <circle cx="12" cy="12" r="6" />
+              <circle cx="12" cy="12" r="2" />
+            </svg>
+          </div>
+          <h3>The Gap</h3>
+          <p>Anecdotal and some clinical evidence points to music helping with pain, but few studies test this with a
+            standardised cold-pressor method that students can actually run. We built a simple, repeatable version of
+            that test.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── RESEARCH QUESTION ───────────── -->
+  <section id="question" class="section section-alt">
+    <div class="container text-center">
+      <p class="section-tag">Our Focus</p>
+      <h2>Research Questions</h2>
+      <div class="question-cards">
+        <div class="question-card reveal">
+          <span class="question-number">Q1</span>
+          <p>Does music <strong>reduce self-reported pain intensity</strong> during a cold-pressor discomfort task?</p>
+        </div>
+        <div class="question-card reveal">
+          <span class="question-number">Q2</span>
+          <p>Does music <strong>increase pain tolerance time</strong> during a cold-pressor discomfort task?</p>
+        </div>
+      </div>
+      <div class="vision-block reveal">
+        <h3>Project Vision</h3>
+        <p>If music reliably reduces perceived pain and extends tolerance, it could be a cheap, useful addition to pain
+          management. Not a replacement for medical treatment, but something anyone can try.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── PROCEDURE ───────────── -->
+  <section id="procedure" class="section">
+    <div class="container">
+      <p class="section-tag">How We Did It</p>
+      <h2>Experiment Procedure</h2>
+
+      <div class="procedure-overview reveal">
+        <div class="overview-item">
+          <span class="overview-number">15</span>
+          <span class="overview-label">Participants</span>
+        </div>
+        <div class="overview-item">
+          <span class="overview-number">2</span>
+          <span class="overview-label">Conditions</span>
+        </div>
+        <div class="overview-item">
+          <span class="overview-number">2</span>
+          <span class="overview-label">Time Points</span>
+        </div>
+        <div class="overview-item">
+          <span class="overview-number">1</span>
+          <span class="overview-label">Survey</span>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">1</div>
+          <div class="timeline-content">
+            <h3>Study Design</h3>
+            <p>A within-subjects comparison with two conditions: <strong>music</strong> and a <strong>neutral
+                control</strong>. Each participant completed both, so we could compare their responses head-to-head.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">2</div>
+          <div class="timeline-content">
+            <h3>Cold Pressor Task</h3>
+            <p>Participants submerged one hand in cold water for up to 60 seconds. This standardised method is common in
+              pain research and produces real but tolerable discomfort.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">3</div>
+          <div class="timeline-content">
+            <h3>Data Collection</h3>
+            <p>Pain intensity was self-rated at <strong>30 seconds</strong> and <strong>60 seconds</strong>. Total time
+              in the water was recorded for each condition.</p>
+          </div>
+        </div>
+        <div class="timeline-item reveal">
+          <div class="timeline-marker">4</div>
+          <div class="timeline-content">
+            <h3>Post-Task Survey</h3>
+            <p>After each session, participants filled out a short survey on their background, how they perceived the
+              pain, and how effective they found the music.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── RESULTS ───────────── -->
+  <section id="results" class="section section-results">
+    <div class="container">
+      <p class="section-tag">Key Findings</p>
+      <h2>Results</h2>
+
+      <div class="results-highlight reveal">
+        <p>Across the board, participants said music made the cold-pressor experience <strong>easier to get
+            through</strong> and <strong>less distressing</strong>.</p>
+      </div>
+
+      <!-- Stat Cards Row -->
+      <div class="stat-cards reveal">
+        <div class="stat-card accent-warm">
+          <div class="stat-card-value">73.3<span class="stat-unit">%</span></div>
+          <div class="stat-card-title">Found Music More Tolerable</div>
+          <p class="stat-card-desc">Nearly three-quarters of participants said the music session felt more tolerable
+            than the silence session.</p>
+        </div>
+        <div class="stat-card accent-gold">
+          <div class="stat-card-value">60<span class="stat-unit">%</span></div>
+          <div class="stat-card-title">Rated Effectiveness ≥ 4/5</div>
+          <p class="stat-card-desc">More than half of participants gave music a 4 or 5 out of 5 for how well it helped
+            with pain.</p>
+        </div>
+      </div>
+
+      <!-- Charts -->
+      <div class="chart-section">
+        <div class="chart-card reveal">
+          <h3>Tolerability Comparison</h3>
+          <div class="bar-chart" role="img"
+            aria-label="Bar chart: 73.3% found music more tolerable versus 26.7% who did not">
+            <div class="bar-group">
+              <div class="bar-label">Music more tolerable</div>
+              <div class="bar-track">
+                <div class="bar-fill fill-warm" style="--bar-width: 73.3%;" data-value="73.3%"></div>
+              </div>
+            </div>
+            <div class="bar-group">
+              <div class="bar-label">No difference / Control</div>
+              <div class="bar-track">
+                <div class="bar-fill fill-neutral" style="--bar-width: 26.7%;" data-value="26.7%"></div>
+              </div>
+            </div>
+          </div>
+          <p class="chart-note">Participants were asked which condition felt more tolerable after completing both.</p>
+        </div>
+
+        <div class="chart-card reveal">
+          <h3>Effectiveness Ratings (1–5 Scale)</h3>
+          <div class="bar-chart" role="img"
+            aria-label="Bar chart: Effectiveness ratings — Rating 5: 33.3%, Rating 4: 26.7%, Rating 3: 20%, Rating 2: 13.3%, Rating 1: 6.7%. 60% of participants rated music effectiveness at 4 or 5 out of 5.">
+            <div class="bar-group">
+              <div class="bar-label">Rating 5</div>
+              <div class="bar-track">
+                <div class="bar-fill fill-warm" style="--bar-width: 33.3%;" data-value="33.3%"></div>
+              </div>
+            </div>
+            <div class="bar-group">
+              <div class="bar-label">Rating 4</div>
+              <div class="bar-track">
+                <div class="bar-fill fill-warm" style="--bar-width: 26.7%;" data-value="26.7%"></div>
+              </div>
+            </div>
+            <div class="bar-group">
+              <div class="bar-label">Rating 3</div>
+              <div class="bar-track">
+                <div class="bar-fill fill-gold" style="--bar-width: 20%;" data-value="20%"></div>
+              </div>
+            </div>
+            <div class="bar-group">
+              <div class="bar-label">Rating 2</div>
+              <div class="bar-track">
+                <div class="bar-fill fill-neutral" style="--bar-width: 13.3%;" data-value="13.3%"></div>
+              </div>
+            </div>
+            <div class="bar-group">
+              <div class="bar-label">Rating 1</div>
+              <div class="bar-track">
+                <div class="bar-fill fill-neutral" style="--bar-width: 6.7%;" data-value="6.7%"></div>
+              </div>
+            </div>
+          </div>
+          <p class="chart-note">60% of participants rated music's pain-relief effectiveness at 4 or 5 on a 5-point
+            scale.</p>
+        </div>
+      </div>
+
+      <div class="results-takeaway reveal">
+        <h3>What This Means</h3>
+        <p>The numbers point in the same direction: music made pain feel less bad. Participants weren't pain-free, but
+          most said the music session was easier, with lower reported distress and longer tolerance times.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── IMPLICATIONS ───────────── -->
+  <section id="implications" class="section section-alt">
+    <div class="container text-center">
+      <p class="section-tag">So What?</p>
+      <h2>Implications</h2>
+      <div class="card-grid cols-2 implications-grid">
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14" />
+              <path d="m9 11 3 3L22 4" />
+            </svg>
+          </div>
+          <h3>Music Shows Promise</h3>
+          <p>Our findings suggest that music can help with pain in a real, measurable way. It's free, needs no
+            prescription, and works through earbuds most people already own.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="13" r="8" />
+              <path d="M12 9v4l2 2" />
+              <path d="M5 3 2 6" />
+              <path d="m22 6-3-3" />
+              <path d="M6.38 18.7 4 21" />
+              <path d="M17.64 18.67 20 21" />
+            </svg>
+          </div>
+          <h3>Tolerance May Improve</h3>
+          <p>Music appears to help people stay in discomfort longer. This might work through distraction, emotional
+            regulation, or both.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 1.98-3A2.5 2.5 0 0 1 9.5 2Z" />
+              <path
+                d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-1.98-3A2.5 2.5 0 0 0 14.5 2Z" />
+            </svg>
+          </div>
+          <h3>Subjective Experience Shifts</h3>
+          <p>Even when the physical conditions are the same, music changes how pain <em>feels</em>. That shift in
+            experience matters, even if the cold water temperature doesn't change.</p>
+        </div>
+        <div class="card reveal">
+          <div class="card-icon">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 2v20" />
+              <path d="M5 7h14" />
+              <path d="M8 7v6a4 4 0 0 0 8 0V7" />
+            </svg>
+          </div>
+          <h3>Not a Universal Cure</h3>
+          <p>These results are promising for a 15-person study, but they're not enough to change how doctors treat pain.
+            That would take much larger, more diverse trials.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── LIMITATIONS & FUTURE WORK ───────────── -->
+  <section id="limitations" class="section">
+    <div class="container">
+      <p class="section-tag">Honest Assessment</p>
+      <h2>Limitations &amp; Future Work</h2>
+      <div class="two-col-grid">
+        <div class="col-card reveal">
+          <h3>
+            <svg width="20" height="20" style="vertical-align: text-bottom; margin-right: 6px; color: var(--accent)"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z" />
+              <path d="M12 9v4" />
+              <path d="M12 17h.01" />
+            </svg>
+            Limitations
+          </h3>
+          <ul>
+            <li><strong>Small sample size</strong> — Only 15 participants, limiting statistical power.</li>
+            <li><strong>No music preference control</strong> — Participants did not choose their music.</li>
+            <li><strong>Simulated pain</strong> — Cold-pressor discomfort differs from clinical pain.</li>
+            <li><strong>Environmental variation</strong> — Minor setting or context changes may have influenced results.
+            </li>
+          </ul>
+        </div>
+        <div class="col-card reveal">
+          <h3>
+            <svg width="20" height="20" style="vertical-align: text-bottom; margin-right: 6px; color: var(--gold)"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z" />
+              <path
+                d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z" />
+              <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0" />
+              <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+            </svg>
+            Future Directions
+          </h3>
+          <ul>
+            <li><strong>Larger, diverse sample</strong> — Increase participant count and demographic range.</li>
+            <li><strong>Genre comparison</strong> — Test whether music preference or genre affects outcomes.</li>
+            <li><strong>Physiological measures</strong> — Add heart rate, skin conductance, or cortisol data.</li>
+            <li><strong>Realistic pain settings</strong> — Test in clinical or post-operative environments.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── TEAM ───────────── -->
+  <section id="team" class="section section-alt">
+    <div class="container text-center">
+      <p class="section-tag">The Crew</p>
+      <h2>Our Team</h2>
+      <div class="team-grid">
+        <div class="team-card reveal">
+          <div class="team-avatar"><img src="images/team/Linn.jpg" alt="Linn Oo" style="object-fit: cover; object-position: center 55%; transform: scale(2); transform-origin: center 55%;" /></div>
+          <h3>Linn Oo</h3>
+          <span class="team-role">CTO</span>
+          <p>Built the website and handled the technical side of the project.</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-avatar"><img src="images/team/Samara.jpg" alt="Samara Jimmy" /></div>
+          <h3>Samara Jimmy</h3>
+          <span class="team-role">Research Lead</span>
+          <p>Designed the study, ran data collection, and worked through the analysis.</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-avatar"><img src="images/team/Elias.jpg" alt="Elias Barakzoy" style="object-fit: cover; transform: scale(1.6) translateX(-5px); transform-origin: center center;" /></div>
+          <h3>Elias Barakzoy</h3>
+          <span class="team-role">Communication Lead</span>
+          <p>Kept the team on track, organized deliverables, and handled project documentation.</p>
+        </div>
+        <div class="team-card reveal">
+          <div class="team-avatar"><img src="images/team/Lynh.jpg" alt="Lynh Mai" /></div>
+          <h3>Lynh Mai</h3>
+          <span class="team-role">UX/UI Lead</span>
+          <p>Handled visual design and UX across the project, from layout decisions to the final presentation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ───────────── REFERENCES / FOOTER ───────────── -->
+  <footer id="references" class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-col">
+          <h3>
+Music as Pain Relief
+          </h3>
+          <p>An INF172 student research project.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#background">Background</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#team">Team</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Source &amp; Evidence</h3>
+          <ul>
+            <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub Repository ↗</a></li>
+            <li><a href="#results">Research Results</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-references">
+        <h3>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle;margin-right:6px"
+            aria-hidden="true">
+            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+          </svg>References
+        </h3>
+        <ol class="references-list">
+          <li>Garza-Villarreal, E. A., Pando, V., Vuust, P., &amp; Parsons, C. (2017). Music-induced analgesia in
+            chronic pain conditions: A systematic review and meta-analysis. <em>Pain Physician, 20</em>(7), 597–610.
+          </li>
+          <li>Getie, A., Bimerew, M., &amp; Kitaw, T. A. (2026). The effect of music therapy on pain management: A
+            systematic review and meta-analysis of randomized controlled trials. <em>Discover Psychology</em>. <a
+              href="https://doi.org/10.1007/s44202-026-00600-2" target="_blank"
+              rel="noopener noreferrer">https://doi.org/10.1007/s44202-026-00600-2</a></li>
+          <li>Goldfine, C. E., Wilson, J. M., Kaithamattam, J., Hasdianda, M. A., Mancey, K., Rehding, A., Schreiber, K.
+            L., Chai, P. R., &amp; Weiner, S. G. (2025). Randomized trial of self-selected music intervention on pain
+            and anxiety in emergency department patients with musculoskeletal back pain. <em>Western Journal of
+              Emergency Medicine, 26</em>(4), 1112–1119. <a href="https://doi.org/10.5811/westjem.34871" target="_blank"
+              rel="noopener noreferrer">https://doi.org/10.5811/westjem.34871</a></li>
+          <li>Hunter, A. R., Heiderscheit, A., Galbally, M., Gravina, D., Mutwalli, H., &amp; Himmerich, H. (2023). The
+            effects of music-based interventions for pain and anxiety management during vaginal labour and caesarean
+            delivery: A systematic review and narrative synthesis of randomized controlled trials. <em>International
+              Journal of Environmental Research and Public Health, 20</em>(23), 7120. <a
+              href="https://doi.org/10.3390/ijerph20237120" target="_blank"
+              rel="noopener noreferrer">https://doi.org/10.3390/ijerph20237120</a></li>
+        </ol>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 Music as Pain Relief — INF172 Group Project. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
