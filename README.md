@@ -95,6 +95,8 @@ inf172 website/
 ├── index.html          # Single-page markup — all sections in one document
 ├── style.css           # Full stylesheet with CSS custom properties
 ├── script.js           # Navigation, scroll reveal, bar chart animations
+├── inf172.ico          # Site favicon
+├── test_site.py        # Playwright end-to-end test suite
 └── images/
     ├── hero-fusion.png     # Hero section image
     └── team/
