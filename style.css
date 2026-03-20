@@ -190,8 +190,8 @@ h3 {
   top: 24px;
   left: 50%;
   transform: translateX(-50%);
-  width: calc(100% - 48px);
-  max-width: 1000px;
+  width: calc(100vw - 48px);
+  max-width: min(1000px, calc(100vw - 48px));
   z-index: 1000;
   background: rgba(30, 45, 36, 0.92);
   backdrop-filter: blur(20px);
@@ -232,6 +232,7 @@ h3 {
   padding: 8px 12px;
   border-radius: var(--radius-full);
   transition: color .2s, background .2s;
+  white-space: nowrap;
 }
 
 .nav-logo:hover {
@@ -550,7 +551,7 @@ h3 {
 
 /* Headline */
 .hero-headline {
-  font-size: clamp(3.2rem, 6vw, 5.2rem);
+  font-size: clamp(3.8rem, 6vw, 5.2rem);
   line-height: 1.1;
   letter-spacing: -0.04em;
   color: var(--text);
@@ -1523,6 +1524,7 @@ h3 {
 
   .fusion-hero .hero-subtitle {
     margin: 0 auto 36px;
+    font-size: 1rem;
   }
 
   .hero-cta-block {
