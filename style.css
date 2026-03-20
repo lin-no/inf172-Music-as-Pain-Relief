@@ -79,6 +79,7 @@ body {
   background: var(--bg);
   line-height: 1.7;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img {
@@ -1549,6 +1550,8 @@ h3 {
 
   .hero-visual-col {
     align-items: center;
+    width: 100%;
+    max-width: 100%;
   }
 
   .hero-link-row {
