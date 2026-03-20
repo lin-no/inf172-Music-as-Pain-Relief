@@ -37,7 +37,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const currentScrollY = window.scrollY;
     
     // Ignore minor scroll movements to prevent flickering/abrupt changes
-    if (Math.abs(currentScrollY - lastScrollY) < 20) {
+    if (Math.abs(currentScrollY - lastScrollY) < 40) {
       ticking = false;
       return;
     }
